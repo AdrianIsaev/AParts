@@ -20,7 +20,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/fasteners")
-public final class FastenersUserController {
+public class FastenersUserController {
     private final FastenersService fastenersService;
 
     @Autowired

@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/employee")
 @PreAuthorize("hasAuthority('ROLE_EMPLOYEE')")
-public final class EmployeeController {
+public class EmployeeController {
     private final EmployeeService employeeService;
     @Autowired
     public EmployeeController(EmployeeService employeeService){

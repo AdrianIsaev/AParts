@@ -25,7 +25,7 @@ import java.util.List;
 
 
 @Controller
-public final class ClientController {
+public class ClientController {
     private final ClientService clientService;
     @Autowired
     public ClientController(ClientService clientService) {

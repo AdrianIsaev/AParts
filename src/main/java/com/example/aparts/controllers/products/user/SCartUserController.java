@@ -20,7 +20,7 @@ import java.util.Map;
 
 @Controller
 @RequestMapping("/shopping")
-public final class SCartUserController {
+public class SCartUserController {
     private final ShoppingCartService shoppingCartService;
     @Autowired
     public SCartUserController(ShoppingCartService shoppingCartService){

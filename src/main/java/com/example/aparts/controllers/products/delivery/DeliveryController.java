@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @PreAuthorize("hasAuthority('ROLE_DELIVERYMAN')")
 @RequestMapping("/delivery")
-public final class DeliveryController {
+public class DeliveryController {
     private final DeliveryService deliveryService;
     @Autowired
     public DeliveryController(DeliveryService deliveryService){

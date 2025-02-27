@@ -22,7 +22,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/suspension")
-public final class SuspensionUserController {
+public class SuspensionUserController {
     private final SuspensionService suspensionService;
     @Autowired
     public SuspensionUserController(SuspensionService suspensionService){

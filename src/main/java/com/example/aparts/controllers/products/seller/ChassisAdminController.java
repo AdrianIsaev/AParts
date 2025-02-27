@@ -23,7 +23,7 @@ import java.security.Principal;
 @PreAuthorize("hasAuthority('ROLE_ADMIN')")
 @RequestMapping("/chassis")
 @RequiredArgsConstructor
-public final class ChassisAdminController {
+public class ChassisAdminController {
     private final ChassisService chassisService;
 
     @Operation(summary = "Get chassis panel", description = "Endpoint for displaying chassis panel")

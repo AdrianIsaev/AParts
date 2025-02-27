@@ -19,7 +19,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/engine")
-public final class EngineUserController {
+public class EngineUserController {
 
     private final EngineService engineService;
 
