@@ -29,6 +29,7 @@ public class ShoppingCartService {
         this.autoPartRepository = autoPartRepository;
     }
 
+    @Transactional
     public AutoPart getAutoPartById(Long id) throws AutoPartException {
         Optional<AutoPart> opt = autoPartRepository.findById(id);
         if (opt.isPresent()) {
@@ -36,7 +37,7 @@ public class ShoppingCartService {
         }
         throw new AutoPartException("AutoPart not found");
     }
-
+    @Transactional
     public ShoppingCart getOrCreateShoppingCartByClient(Client client) {
         ShoppingCart shoppingCart = shoppingCartRepository.getShoppingCartByClientAndActive(client, true);
         if (shoppingCart == null) {
@@ -73,7 +74,7 @@ public class ShoppingCartService {
         shoppingCartRepository.save(shoppingCart);
         return "success";
     }
-
+    @Transactional
     public void removeProductFromCart(Client client, Long id) throws AutoPartException {
 
         ShoppingCart shoppingCart = shoppingCartRepository.getShoppingCartByClientAndActive(client, true);

@@ -31,7 +31,7 @@ public class ClientService{
         this.autoPartRepository = autoPartRepository;
         this.passwordEncoder = passwordEncoder;
     }
-
+    @Transactional
     public boolean createClient(Client client){
         String email = client.getEmail();
         if (clientRepository.findByEmail(email) != null) return false;
@@ -50,17 +50,17 @@ public class ClientService{
         clientRepository.save(currentClient);
         return true;
     }
-
+    @Transactional
     public Client getClientByPrincipal(Principal principal){
         if (principal == null) return new Client();
         return clientRepository.findByEmail(principal.getName());
     }
-
+    @Transactional
     public List<AutoPart> getAllAutoParts(){
         return autoPartRepository.findAll();
     }
 
-
+    @Transactional
     public List<ShoppingCart> getHistory(Client client) {
         return shoppingCartRepository.findAllByActiveAndClient(false, client);
     }

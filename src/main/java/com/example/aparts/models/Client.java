@@ -16,7 +16,7 @@ import java.util.Set;
 @Entity
 @Data
 @Table(name = "clients")
-public class Client implements UserDetails {
+public final class Client implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

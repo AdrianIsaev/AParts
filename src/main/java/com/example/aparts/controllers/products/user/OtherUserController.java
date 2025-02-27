@@ -18,7 +18,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/other")
-public class OtherUserController {
+public final class OtherUserController {
     private final OtherService otherService;
     @Autowired
     public OtherUserController(OtherService otherService){

@@ -28,7 +28,7 @@ import java.security.Principal;
 @PreAuthorize("hasAuthority('ROLE_ADMIN')")
 @RequestMapping("/suspension")
 @RequiredArgsConstructor
-public class SuspensionAdminController {
+public final class SuspensionAdminController {
     private final SuspensionService suspensionService;
 
     @Operation(summary = "Get suspension panel", description = "Endpoint for displaying suspension panel")

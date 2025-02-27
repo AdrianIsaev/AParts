@@ -26,7 +26,7 @@ import java.security.Principal;
 @PreAuthorize("hasAuthority('ROLE_ADMIN')")
 @RequestMapping("/fasteners")
 @RequiredArgsConstructor
-public class FastenersAdminController {
+public final class FastenersAdminController {
 
     private final FastenersService fastenersService;
 

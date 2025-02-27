@@ -25,7 +25,7 @@ import java.security.Principal;
 @Controller
 @RequestMapping("/admin")
 @PreAuthorize("hasAuthority('ROLE_ADMIN')")
-public class AdminController {
+public final class AdminController {
     private final AdminService adminService;
 
     @Autowired

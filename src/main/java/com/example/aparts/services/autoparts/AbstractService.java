@@ -27,7 +27,7 @@ public abstract class AbstractService<APart extends AutoPart, SpecializedReposit
     protected final ClientRepository clientRepository;
     protected final ImageRepository imageRepository;
     protected final SpecializedRepository specializedRepository;
-
+    @Transactional
     public Client getClientByPrincipal(Principal principal){
         if (principal == null) return new Client();
         return clientRepository.findByEmail(principal.getName());
@@ -83,7 +83,7 @@ public abstract class AbstractService<APart extends AutoPart, SpecializedReposit
         }
         return validation;
     }
-
+    @Transactional
     public Image toImageEntity(MultipartFile file) throws IOException{
         Image image = new Image();
         image.setName(file.getName());
@@ -94,6 +94,7 @@ public abstract class AbstractService<APart extends AutoPart, SpecializedReposit
         return image;
     }
 
+    @Transactional
     public APart getAPartById(Long id) throws AutoPartException {
         Optional<APart> aPart = specializedRepository.findById(id);
         if (aPart.isPresent()) return aPart.get();
@@ -136,6 +137,7 @@ public abstract class AbstractService<APart extends AutoPart, SpecializedReposit
             log.error("репозиторий вернул null объект");
         }
     }
+    @Transactional
     public List<APart> getAllAParts(){
         return specializedRepository.findAll();
     }

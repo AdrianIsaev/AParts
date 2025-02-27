@@ -28,7 +28,7 @@ public class EmployeeService {
         this.shoppingCartRepository = shoppingCartRepository;
         this.clientRepository = clientRepository;
     }
-
+    @Transactional
     public List<ShoppingCart> findAllCreatedOrders(){
         List<ShoppingCart> orders = new ArrayList<>();
         orders.addAll(shoppingCartRepository.findAllByStatus(Status.ACCEPTED));
@@ -58,7 +58,7 @@ public class EmployeeService {
         order.setStatus(Status.ASSEMBLED);
         shoppingCartRepository.save(order);
     }
-
+    @Transactional
     private ShoppingCart getOrderFromOptionalOrThrowException(Long id) throws ShoppingCartException {
         Optional<ShoppingCart> shoppingCartOpt = shoppingCartRepository.findById(id);
         if (shoppingCartOpt.isEmpty()) throw new ShoppingCartException("ShoppingCart not found");

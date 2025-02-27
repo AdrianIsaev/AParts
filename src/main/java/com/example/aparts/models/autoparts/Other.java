@@ -7,7 +7,7 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Data
-public class Other extends AutoPart{
+public final class Other extends AutoPart{
     @Override
     public String toControllerAutoPartType() {
         return "OTHER";

@@ -28,7 +28,7 @@ import java.security.Principal;
 @PreAuthorize("hasAuthority('ROLE_ADMIN')")
 @RequestMapping("/other")
 @RequiredArgsConstructor
-public class OtherAdminController {
+public final class OtherAdminController {
     private final OtherService otherService;
 
     @Operation(summary = "Get other panel", description = "Endpoint for displaying other panel")

@@ -15,7 +15,7 @@ import java.util.Set;
 @Table
 @Entity
 @Data
-public class ShoppingCart {
+public final class ShoppingCart {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

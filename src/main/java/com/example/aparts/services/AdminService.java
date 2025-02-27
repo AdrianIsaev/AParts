@@ -127,19 +127,19 @@ public class AdminService {
     public List<ShoppingCart> getHistory(Client client) {
         return shoppingCartRepository.findAllByActiveAndClient(false, client);
     }
-
+    @Transactional
     private ShoppingCart getShoppingCartFromOptionalOrThrowException(Long id) throws ShoppingCartException {
         Optional<ShoppingCart> optional = shoppingCartRepository.findById(id);
         if (optional.isEmpty()) throw new ShoppingCartException("ShoppingCart not found");
         return optional.get();
     }
-
+    @Transactional
     private AutoPart getAutoPartFromOptionalOrThrowException(Long id) throws AutoPartException {
         Optional<AutoPart> optional = autoPartRepository.findById(id);
         if (optional.isEmpty()) throw new AutoPartException("AutoPart not found");
         return optional.get();
     }
-
+    @Transactional
     private Client getClientFromOptionalOrThrowException(Long id) throws ClientException {
         Optional<Client> optional = clientRepository.findById(id);
         if (optional.isEmpty()) throw new ClientException("Client not found");

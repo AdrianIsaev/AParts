@@ -18,7 +18,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/chassis")
-public class ChassisUserController {
+public final class ChassisUserController {
     private final ChassisService chassisService;
     @Autowired
     public ChassisUserController(ChassisService chassisService){

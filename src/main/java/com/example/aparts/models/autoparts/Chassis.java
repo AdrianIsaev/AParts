@@ -8,7 +8,7 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @Entity
-public class Chassis extends AutoPart{
+public final class Chassis extends AutoPart{
     @Override
     public String toControllerAutoPartType() {
         return "CHASSIS";

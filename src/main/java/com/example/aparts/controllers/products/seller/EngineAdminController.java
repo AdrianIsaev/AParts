@@ -25,7 +25,7 @@ import java.security.Principal;
 @RequestMapping("/engine")
 @PreAuthorize("hasAuthority('ROLE_ADMIN')")
 @RequiredArgsConstructor
-public class EngineAdminController {
+public final class EngineAdminController {
 
     private final EngineService engineService;
 

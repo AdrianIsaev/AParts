@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "images")
-public class Image {
+public final class Image {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -33,7 +33,7 @@ public class Image {
     private boolean isPreviewImage;
 
     @Lob
-    @Column(name = "bytes", columnDefinition = "BYTEA")
+    @Column(name = "bytes")
     private byte[] bytes;
 
     @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
