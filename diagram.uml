@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="-418.2642626480086" y="-489.5">com.example.aparts.models.Client</node>
+    <node x="-68.0" y="-478.5">com.example.aparts.models.ShoppingCart</node>
+  </nodes>
+  <notes />
+  <edges />
+  <settings layout="Hierarchic Compact" zoom="0.8962818003913894" showDependencies="false" x="-104.5" y="21.000000000000114" />
+  <SelectedNodes>
+    <node>com.example.aparts.models.Client</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
